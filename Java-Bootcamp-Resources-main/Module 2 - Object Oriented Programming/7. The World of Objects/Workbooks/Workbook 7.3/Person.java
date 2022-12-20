@@ -10,6 +10,7 @@ public class Person {
         this.nationality = nationality;
         this.dateOfBirth = dateOfBirth;
         this.seatNumber = seatNumber;
+        passport = new String[]{this.name, this.nationality, this.dateOfBirth}; // Array that stores: {person.name, person.nationality, person.dateOfBirth}
     }
 
 

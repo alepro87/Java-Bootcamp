@@ -17,7 +17,7 @@ public class Main {
         System.out.println(person.getName());
         System.out.println(person.getNationality());
         System.out.println(person.getDateOfBirth());
-        // System.out.println(Arrays.toString(person.passport));
+        System.out.println(Arrays.toString(person.getPassport()));
         System.out.println(person.getSeatNumber());
     }
 }
