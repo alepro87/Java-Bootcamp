@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
         Person person = new Person("Robert Anthony De Niro Jr", "American", "August 17, 1943");
