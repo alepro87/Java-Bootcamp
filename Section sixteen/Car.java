@@ -4,6 +4,7 @@ public class Car {
     private int year;
     private String color;
 
+    //Standart Constructor
     public Car(String make, double price, int year, String color){
         this.make = make;
         this.price = price;
@@ -11,7 +12,17 @@ public class Car {
         this.color = color;
     }
 
-
+    //Copy constructor
+    public Car(Car source) {
+        this.make = source.make;
+        this.price = source.price;
+        this.year = source.year;
+        this.color = source.color;
+    }
+    
+    /*
+     * Getters and Setters for all the variables in the class.
+     */
     public String getMake() {
         return this.make;
     }

@@ -8,6 +8,10 @@ public class Main {
         // nissan.price = 10000;
         // nissan.year = 2020;
         // nissan.color = "Green";
+        Car nissan2 = new Car(nissan);
+        nissan2.setColor("Yellow");
+        nissan2.setPrice(9000);
+        nissan2.setYear(2019);
 
         Car dodge = new Car("Dodge", 11000, 2019, "Blue");
         // dodge.make = "Dodge";
