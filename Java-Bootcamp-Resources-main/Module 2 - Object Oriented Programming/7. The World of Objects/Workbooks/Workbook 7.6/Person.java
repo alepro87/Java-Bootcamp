@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Person {
     private String name;
     private String nationality;
@@ -10,6 +12,7 @@ public class Person {
         this.nationality = nationality;
         this.dateOfBirth = dateOfBirth;
         this.seatNumber = seatNumber;
+        this.passport = new String[3];
     }
 
     public Person(String name, String nationality, String dateOfBirth) {
@@ -17,6 +20,7 @@ public class Person {
         this.nationality = nationality;
         this.dateOfBirth = dateOfBirth;
         chooseSeat();
+        this.passport = new String[3];
     }
 
     public Person(Person source) {
@@ -24,6 +28,7 @@ public class Person {
         this.dateOfBirth = source.dateOfBirth;
         this.nationality = source.nationality;
         chooseSeat();
+        this.passport = new String[3];
     }
 
     public String getName() {
@@ -51,13 +56,13 @@ public class Person {
     }
 
     public String[] getPassport() {
-        passport = new String[]{this.name, this.nationality, this.dateOfBirth}; // Array that stores: {person.name, person.nationality, person.dateOfBirth}
-        return this.passport;
+        //passport = new String[]{this.name, this.nationality, this.dateOfBirth}; // Array that stores: {person.name, person.nationality, person.dateOfBirth}
+        return Arrays.copyOf(this.passport, this.passport.length);
     }
 
-    // public void setPassport(String[] passport) {
-    //     this.passport = passport;
-    // }
+    public void setPassport() {
+        this.passport = new String[] {this.name, this.nationality, this.dateOfBirth};
+    }
 
     public int getSeatNumber() {
         return this.seatNumber;
@@ -74,7 +79,7 @@ public class Person {
      *  Inside the function:
      *     1. Returns a random boolean of true or false.
      */
-    public boolean applyPassort() {
+    public boolean applyPassport() {
         int number = (int)(Math.random() * 2);  //random int that can be 0 or 1.
 
         return number == 1;

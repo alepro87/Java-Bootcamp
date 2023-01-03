@@ -1,8 +1,19 @@
+import java.util.Arrays;
+
 public class Car {
     private String make;
     private double price;
     private int year;
     private String color;
+    private String[] spareParts;
+
+    public Car(String make, double price, int year, String color, String[] spareParts) {
+        this.make = make;
+        this.price = price;
+        this.year = year;
+        this.color = color;
+        this.spareParts = Arrays.copyOf(spareParts, spareParts.length);
+    }
 
     //Standart Constructor
     public Car(String make, double price, int year, String color){
@@ -18,6 +29,7 @@ public class Car {
         this.price = source.price;
         this.year = source.year;
         this.color = source.color;
+        this.spareParts = Arrays.copyOf(source.spareParts, source.spareParts.length);
     }
     
     /*
@@ -53,6 +65,14 @@ public class Car {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    public String[] getSpareParts() {
+        return Arrays.copyOf(this.spareParts, this.spareParts.length);
+    }
+
+    public void setSpareParts(String[] spareParts) {
+        this.spareParts = Arrays.copyOf(spareParts, spareParts.length);
     }
 
     public void drive() {
