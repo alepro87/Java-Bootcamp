@@ -15,19 +15,18 @@ public class Person {
         this.passport = new String[3];
     }
 
-    public Person(String name, String nationality, String dateOfBirth) {
-        this.name = name;
-        this.nationality = nationality;
-        this.dateOfBirth = dateOfBirth;
-        chooseSeat();
-        this.passport = new String[3];
-    }
+    // public Person(String name, String nationality, String dateOfBirth) {
+    //     this.name = name;
+    //     this.nationality = nationality;
+    //     this.dateOfBirth = dateOfBirth;
+    //     this.passport = new String[3];
+    // }
 
     public Person(Person source) {
         this.name = source.name;
         this.dateOfBirth = source.dateOfBirth;
         this.nationality = source.nationality;
-        chooseSeat();
+        this.seatNumber = source.seatNumber;
         this.passport = new String[3];
     }
 
