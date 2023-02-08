@@ -1,10 +1,11 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-
-        List<String> cities = new ArrayList<>();
+        
+        List<String> cities = new LinkedList<>(); //ArrayList<>();
         cities.add("Paris");
         cities.add("Florence");
         cities.add("Venice");
@@ -26,6 +27,5 @@ public class Main {
         System.out.println(cities.get(8));
         cities.set(2, "Naples");
         cities.remove(5);
-
     }
 }
